@@ -1,25 +1,23 @@
-import dayjs from "dayjs";
 import timeline from "../data/timeline";
 import { motion } from "framer-motion";
 
 export default function Timeline({ onNext, onPrev }) {
   return (
     <div style={{ textAlign: "center" }}>
-      <h2>Nuestra Historia</h2>
+      <h2>Crear Nuestra Historia</h2>
       <div style={{ textAlign: "left", maxWidth: 600, margin: "auto" }}>
-        {timeline.map(({ date, title, description }, i) => (
+        {timeline.map(({ title, description }, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.3 }}
+            transition={{ delay: i * 0.2 }}
             style={{
               marginBottom: 25,
               borderLeft: "3px solid #ff4081",
               paddingLeft: 15,
             }}
           >
-            <strong>{dayjs(date).format("DD MMM YYYY")}</strong>
             <h4 style={{ margin: "5px 0" }}>{title}</h4>
             <p>{description}</p>
           </motion.div>
