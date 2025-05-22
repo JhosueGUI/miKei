@@ -5,7 +5,7 @@ const message = `Querida Kei,
 Quería que supieras cuánto significas para mí. Cada momento contigo es un regalo, y esta pequeña sorpresa es solo una muestra de todo lo que siento.
 
 Con todo mi amor,
-[Tu Nombre]`;
+Jhosue`;
 
 export default function TypingLetter({ onPrev }) {
   const [displayedText, setDisplayedText] = useState("");

@@ -2,24 +2,20 @@
 
 const gallery = [
     {
-      src: "/public/img/images.jpg",
-      caption: "Nuestro primer paseo juntos",
+      src: "/public/img/1.jpeg",
+      caption: "La foto que mas me gusta",
     },
     {
-      src: "/public/img/images.jpg",
-      caption: "Día de picnic en el parque",
+      src: "/public/img/3.jpeg",
+      caption: "Lo regia que eres",
     },
     {
-      src: "/public/img/images.jpg",
-      caption: "Atardecer inolvidable",
+      src: "/public/img/2.jpeg",
+      caption: "La perfección hecha persona",
     },
     {
-      ssrc: "/public/img/images.jpg",
-      caption: "Fiesta sorpresa de cumpleaños",
-    },
-    {
-      src: "/public/img/images.jpg",
-      caption: "Vacaciones soñadas",
+      src: "/public/img/5.jpeg",
+      caption: "La mirada que me atrapa",
     }
   ];
   

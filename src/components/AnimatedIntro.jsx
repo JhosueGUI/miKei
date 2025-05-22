@@ -16,7 +16,7 @@ export default function AnimatedIntro({ onNext }) {
       }}
     >
       <h1 style={{ fontSize: "3rem", color: "#ff4081" }}>
-        Hola Kei, esto es solo para ti 💗
+        Hola mi amada Kei, esto es solo para ti 💗
       </h1>
       <button
         onClick={onNext}

@@ -1,52 +1,46 @@
 // src/data/timeline.js
 
 const timeline = [
-    {
-      date: "2022-06-15",
-      title: "Nos conocimos",
-      description: "El día que nuestras miradas se cruzaron por primera vez.",
-    },
-    {
-      date: "2022-07-01",
-      title: "Primera cita",
-      description: "Fuimos a ese café acogedor donde todo comenzó a sentirse especial.",
-    },
-    {
-      date: "2022-08-20",
-      title: "Nuestro primer viaje juntos",
-      description: "Un fin de semana inolvidable explorando la naturaleza.",
-    },
-    {
-      date: "2022-12-24",
-      title: "Primera Navidad juntos",
-      description: "Celebramos la magia de las fiestas rodeados de amor.",
-    },
-    {
-      date: "2023-02-14",
-      title: "San Valentín especial",
-      description: "Un día para recordar, lleno de sorpresas y cariño.",
-    },
-    {
-      date: "2023-05-10",
-      title: "Decidimos vivir juntos",
-      description: "Un paso importante para fortalecer nuestra relación.",
-    },
-    {
-      date: "2023-11-05",
-      title: "Nuestro aniversario",
-      description: "Celebramos un año lleno de momentos únicos y memorables.",
-    },
-    {
-      date: "2024-02-14",
-      title: "Segunda celebración de San Valentín",
-      description: "Más enamorados que nunca, con planes para el futuro.",
-    },
-    {
-      date: "2024-04-22",
-      title: "Un día especial",
-      description: "Recordando todo lo vivido y soñando juntos.",
-    }
-  ];
-  
-  export default timeline;
-  
+  {
+    date: "Por establecer",
+    title: "Viaje a Machu Picchu",
+    description: "Una aventura por la historia y la naturaleza en uno de los lugares más mágicos del mundo.",
+  },
+  {
+    date: "Por establecer",
+    title: "Paseo en globo aerostático",
+    description: "Ver el amanecer desde las alturas, flotando entre las nubes.",
+  },
+  {
+    date: "Por establecer",
+    title: "Aprender a bailar salsa",
+    description: "Clases semanales, risas aseguradas y mucho ritmo.",
+  },
+  {
+    date: "Por establecer",
+    title: "Escapada a la playa sin celulares",
+    description: "Desconectarnos del mundo para reconectarnos entre nosotros.",
+  },
+  {
+    date: "Por establecer",
+    title: "Ver auroras boreales",
+    description: "Viajar al norte para vivir la magia de las luces danzantes del cielo.",
+  },
+  {
+    date: "Por establecer",
+    title: "Hacer una cápsula del tiempo",
+    description: "Guardar recuerdos, cartas y sueños para abrirla en 10 años.",
+  },
+  {
+    date: "Por establecer",
+    title: "Road trip en camper van",
+    description: "Sin ruta fija, solo mapas, buena música y ganas de explorar.",
+  },
+  {
+    date: "Por establecer",
+    title: "Adoptar una mascota juntos",
+    description: "Dar hogar y amor a un nuevo integrante de nuestra familia.",
+  }
+];
+
+export default timeline;
