@@ -1,23 +1,13 @@
-// src/data/gallery.js
+import img1 from '../assets/img/1.jpeg'
+import img2 from '../assets/img/2.jpeg'
+import img3 from '../assets/img/3.jpeg'
+import img5 from '../assets/img/5.jpeg'
 
 const gallery = [
-    {
-      src: "/public/img/1.jpeg",
-      caption: "La foto que mas me gusta",
-    },
-    {
-      src: "/public/img/3.jpeg",
-      caption: "Lo regia que eres",
-    },
-    {
-      src: "/public/img/2.jpeg",
-      caption: "La perfección hecha persona",
-    },
-    {
-      src: "/public/img/5.jpeg",
-      caption: "La mirada que me atrapa",
-    }
-  ];
-  
-  export default gallery;
-  
+  { src: img1, caption: 'La foto que más me gusta' },
+  { src: img3, caption: 'Lo regia que eres' },
+  { src: img2, caption: 'La perfección hecha persona' },
+  { src: img5, caption: 'La mirada que me atrapa' }
+]
+
+export default gallery;
