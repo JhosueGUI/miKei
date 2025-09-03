@@ -1,0 +1,72 @@
+/* src/components/OpeningEnvelope.css */
+.envelope-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d32660; /* Coincide con el color de fondo de tu app */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 1s ease-in-out;
+  pointer-events: all;
+}
+
+.envelope-container.hide {
+  opacity: 0;
+  pointer-events: none; /* Deshabilita los clics y la interacción */
+}
+
+.envelope {
+  width: 250px;
+  height: 150px;
+  position: relative;
+  transform: scale(0.8);
+}
+
+.flap, .body, .letter {
+  position: absolute;
+}
+
+.flap {
+  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-top: 75px solid #d4a7c0; /* Color del borde del sobre */
+  top: 0;
+  left: 0;
+  transform-origin: top;
+  transition: transform 1.5s ease-in-out;
+  transform: rotateX(0deg);
+}
+
+.body {
+  width: 250px;
+  height: 150px;
+  background-color: #f0b4d4; /* Color del sobre */
+  top: 0;
+  left: 0;
+}
+
+.letter {
+  width: 200px;
+  height: 120px;
+  background-color: #ffffff; /* Color de la carta */
+  top: 15px;
+  left: 25px;
+  z-index: 1;
+  transition: transform 1s ease-out 1.5s;
+  transform: translateY(0);
+}
+
+/* Animación de apertura */
+.envelope-container.show .flap {
+  transform: rotateX(180deg);
+}
+
+.envelope-container.show .letter {
+  transform: translateY(-100px); /* La carta se desliza hacia arriba */
+}

@@ -1,0 +1,50 @@
+/* src/components/ReasonsAnimation.css */
+
+.reasons-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fce4ec; /* Coincide con el color de fondo de tu App */
+}
+
+.reasons-title {
+  font-family: 'Georgia', serif; /* Un tipo de letra con un toque clásico */
+  font-size: 3em;
+  color: #ff69b4;
+  text-align: center;
+  overflow: hidden; /* Oculta el texto que se está "escribiendo" */
+  white-space: pre-wrap; /* Permite que el texto se divida en varias líneas por <br> */
+  border-right: 0.15em solid #ff69b4; /* El cursor que parpadea */
+  /* Ajusta la duración de la animación 'typing' a 4 segundos */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  padding-right: 0.15em; /* Espacio para el cursor */
+}
+
+.reasons-title .emphasized-quedarme {
+  font-size: 1.2em; /* Haz "QUEDARME" un poco más grande */
+  font-weight: bold; /* Lo hace más grueso */
+  color: #e91e63; /* Un color un poco más intenso */
+}
+
+/* Animación de la máquina de escribir */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    /* Ajusta este valor para que abarque todo el texto, incluyendo los saltos de línea */
+    /* El 100% funciona bien con white-space: pre-wrap */
+    width: 100%; 
+  }
+}
+
+/* Animación del cursor que parpadea */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff69b4;
+  }
+}

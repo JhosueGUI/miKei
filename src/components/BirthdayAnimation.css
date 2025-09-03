@@ -1,0 +1,116 @@
+/* src/components/BirthdayAnimation.css */
+.birthday-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fce4ec; /* Color de fondo festivo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 1s ease-in-out;
+  pointer-events: all;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Evita que el confeti se desborde */
+}
+
+.birthday-container.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.birthday-message {
+  text-align: center;
+  color: #ff69b4;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.message-title {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.message-text {
+  font-size: 1.5em;
+}
+
+/* Animación de confeti */
+.confetti-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff69b4; /* Rosa */
+  border-radius: 50%;
+  opacity: 0;
+  animation: confetti-fall 3s ease-out infinite;
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  background-color: #f0b4d4;
+}
+
+.confetti:nth-child(2) {
+  left: 25%;
+  animation-delay: 0.5s;
+  background-color: #ff69b4;
+}
+
+.confetti:nth-child(3) {
+  left: 40%;
+  animation-delay: 1s;
+  background-color: #fce4ec;
+}
+
+.confetti:nth-child(4) {
+  left: 55%;
+  animation-delay: 1.5s;
+  background-color: #f0b4d4;
+}
+
+.confetti:nth-child(5) {
+  left: 70%;
+  animation-delay: 2s;
+  background-color: #ff69b4;
+}
+
+.confetti:nth-child(6) {
+  left: 85%;
+  animation-delay: 2.5s;
+  background-color: #fce4ec;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

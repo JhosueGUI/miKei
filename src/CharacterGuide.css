@@ -1,0 +1,148 @@
+/* CharacterGuide.css */
+
+.character-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 150px;
+  pointer-events: none; /* Para que el clic pase a través de él */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 3; /* Asegura que esté por encima de todo */
+}
+
+.character-container.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-20px); /* Un pequeño salto al aparecer */
+}
+
+/* --- Animaciones del personaje --- */
+
+.character-body,
+.character-head,
+.character-arm {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f7a0b3; /* Un rosa cálido */
+}
+
+.character-body {
+  width: 80px;
+  height: 80px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s ease-in-out infinite; /* Animación de rebote */
+}
+
+.character-head {
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.character-arm {
+  width: 20px;
+  height: 60px;
+  top: 60px;
+  transform-origin: top center;
+  background-color: #f7a0b3;
+}
+
+.left-arm {
+  left: 10px;
+  transform: rotate(-30deg);
+  animation: wave-left 1.5s ease-in-out infinite; /* Mueve el brazo izquierdo */
+}
+
+.right-arm {
+  right: 10px;
+  transform: rotate(30deg);
+  animation: wave-right 1.5s ease-in-out infinite; /* Mueve el brazo derecho */
+}
+
+.character-heart {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff69b4; /* El rosa del corazón */
+  transform: rotate(-45deg);
+  top: 80px;
+  left: 50%;
+  margin-left: -12.5px;
+  animation: pulse 1.5s ease-in-out infinite; /* Animación de latido */
+}
+.character-heart::before,
+.character-heart::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+}
+.character-heart::before {
+  top: -12.5px;
+  left: 0;
+}
+.character-heart::after {
+  left: 12.5px;
+  top: 0;
+}
+
+/* --- Globo de diálogo --- */
+.speech-bubble {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #3e3e3e;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  white-space: nowrap;
+}
+
+/* --- Definiciones de las animaciones --- */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+@keyframes wave-left {
+  0%, 100% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes wave-right {
+  0%, 100% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+}

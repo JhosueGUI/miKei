@@ -1,0 +1,43 @@
+.leave-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.leave-title {
+  font-family: 'Georgia', serif;
+  font-size: 3em;
+  color: #ff6347; /* Un color de texto más fuerte, como un rojo tomate */
+  text-align: center;
+  overflow: hidden;
+  white-space: pre-wrap;
+  border-right: 0.15em solid #ff6347;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  padding-right: 0.15em;
+}
+
+.leave-title .emphasized-leave {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #c0392b; /* Un rojo más oscuro para el énfasis */
+}
+
+/* Reutilizamos las animaciones keyframes, ya que son las mismas */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff6347;
+  }
+}

@@ -1,0 +1,69 @@
+.receipt-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.printer-top, .printer-bottom {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 20px;
+  position: relative;
+  /* Ensure the printer parts are on top of the receipts */
+  z-index: 2; 
+}
+
+.printer-top {
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.printer-bottom {
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.receipt-area {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+  padding: 10px 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+
+  /* This is the key change for the reverse stacking effect */
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.receipt-area .receipt-container {
+  margin-bottom: 20px;
+  /* Add a subtle animation when a new receipt is added */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.perforation-line {
+  width: 100%;
+  height: 3px;
+  background: repeating-linear-gradient(-45deg, #ccc, #ccc 5px, #fff 5px, #fff 10px);
+  margin: 20px 0;
+}
