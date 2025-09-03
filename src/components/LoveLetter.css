@@ -1,11 +1,10 @@
-/* src/components/LoveLetter.css */
+/* Estilos base (para dispositivos de escritorio y pantallas grandes) */
 .love-letter-container {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fce4ec; /* Coincide con el color de la app */
+  background-color: #fce4ec;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,4 +70,32 @@
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* --- Media Query para pantallas más pequeñas (teléfonos móviles) ---
+  Estos estilos se aplicarán cuando el ancho del viewport sea de 600px o menos.
+*/
+@media (max-width: 600px) {
+  .letter-content {
+    padding: 20px;
+    max-width: 90%;
+    box-shadow: none; /* Elimina la sombra para un diseño más limpio en móvil */
+  }
+
+  .letter-heading {
+    font-size: 1.8em;
+  }
+
+  .letter-text {
+    font-size: 1em;
+  }
+
+  .letter-signature {
+    font-size: 1.5em;
+  }
+
+  .continue-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
 }

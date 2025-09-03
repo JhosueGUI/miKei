@@ -1,4 +1,3 @@
-// src/components/LoveLetter.jsx
 import React from 'react';
 import './LoveLetter.css';
 
