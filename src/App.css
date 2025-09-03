@@ -21,7 +21,6 @@ body {
 
 /* Contenedor principal de la aplicación */
 .app-container {
-  width: 100%;
   max-width: 600px;
   margin: 50px auto;
   text-align: center;

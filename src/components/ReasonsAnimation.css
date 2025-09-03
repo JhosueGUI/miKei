@@ -10,7 +10,7 @@
 
 .reasons-title {
   font-family: 'Georgia', serif; /* Un tipo de letra con un toque clásico */
-  font-size: 3em;
+  font-size: 2em;
   color: #ff69b4;
   text-align: center;
   overflow: hidden; /* Oculta el texto que se está "escribiendo" */
